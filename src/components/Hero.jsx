@@ -1,3 +1,5 @@
+import profileImage from "../assets/sama-profile.png";
+
 function Hero() {
   return (
     <section id="home" className="hero">
@@ -22,7 +24,7 @@ function Hero() {
             </a>
 
             <a
-              href="/Sama-Wahidee-CV.pdf"
+              href={`${import.meta.env.BASE_URL}Sama-Wahidee-CV.pdf`}
               className="btn btn-secondary"
               download
             >
@@ -47,10 +49,7 @@ function Hero() {
           <div className="image-shape"></div>
 
           <div className="profile-photo">
-            <img
-              src={`${import.meta.env.BASE_URL}images/sama-profile.png`}
-              alt="Sama Wahidee"
-            />{" "}
+            <img src={profileImage} alt="Sama Wahidee" />
           </div>
 
           <div className="hero-note">
