@@ -47,7 +47,10 @@ function Hero() {
           <div className="image-shape"></div>
 
           <div className="profile-photo">
-            <img src="/images/sama-profile.png" alt="Sama Wahidee" />
+            <img
+              src={`${import.meta.env.BASE_URL}images/sama-profile.png`}
+              alt="Sama Wahidee"
+            />{" "}
           </div>
 
           <div className="hero-note">
