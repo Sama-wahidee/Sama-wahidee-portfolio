@@ -1,5 +1,5 @@
 import profileImage from "../assets/sama-profile.png";
-
+import cvFile from "../assets/Sama-Wahidee-CV.pdf";
 function Hero() {
   return (
     <section id="home" className="hero">
@@ -24,9 +24,9 @@ function Hero() {
             </a>
 
             <a
-              href={`${import.meta.env.BASE_URL}Sama-Wahidee-CV.pdf`}
+              href={cvFile}
+              download="Sama-Wahidee-CV.pdf"
               className="btn btn-secondary"
-              download
             >
               ↓ Download CV
             </a>

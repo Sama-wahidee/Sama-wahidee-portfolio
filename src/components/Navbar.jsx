@@ -1,3 +1,5 @@
+import cvFile from "../assets/Sama-Wahidee-CV.pdf";
+
 function Navbar() {
   return (
     <header className="navbar">
@@ -12,10 +14,11 @@ function Navbar() {
           <a href="#projects">Projects</a>
           <a href="#skills">Skills</a>
           <a href="#experience">Experience</a>
+          <a href="#education">Education</a>
           <a href="#contact">Contact</a>
         </nav>
 
-        <a href="/Sama-Wahidee-CV.pdf" className="nav-cv" download>
+        <a href={cvFile} download="Sama-Wahidee-CV.pdf" className="nav-cv">
           Download CV
         </a>
       </div>

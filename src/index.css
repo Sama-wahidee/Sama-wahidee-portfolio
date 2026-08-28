@@ -8,11 +8,4 @@ body,
 body {
   margin: 0;
 }
-@media (max-width: 900px) {
 
-  .about-grid {
-    grid-template-columns: 1fr;
-    gap: 3rem;
-  }
-
-}
