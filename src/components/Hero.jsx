@@ -1,4 +1,4 @@
-import profileImage from "../assets/sama.jpeg";
+import profileImage from "../assets/sama-profile.png";
 import cvFile from "../assets/Sama-Wahidee-CV.pdf";
 function Hero() {
   return (
