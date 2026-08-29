@@ -1,4 +1,30 @@
+import { FaEnvelope, FaLinkedinIn, FaGithub } from "react-icons/fa";
+import { FiArrowUpRight } from "react-icons/fi";
+
 function Contact() {
+  const contactLinks = [
+    {
+      label: "EMAIL",
+      value: "samawahidee@gmail.com",
+      href: "mailto:samawahidee@gmail.com",
+      icon: FaEnvelope,
+    },
+    {
+      label: "LINKEDIN",
+      value: "View my LinkedIn profile",
+      href: "https://www.linkedin.com/in/samawahidee/",
+      icon: FaLinkedinIn,
+      external: true,
+    },
+    {
+      label: "GITHUB",
+      value: "View my GitHub projects",
+      href: "https://github.com/Sama-wahidee/",
+      icon: FaGithub,
+      external: true,
+    },
+  ];
+
   return (
     <section id="contact" className="section contact">
       <div className="container">
@@ -16,33 +42,34 @@ function Contact() {
           </div>
 
           <div className="contact-details">
-            <a href="mailto:samawahidee@gmail.com" className="contact-link">
-              <span className="contact-label">EMAIL</span>
-              <span className="contact-value">samawahidee@gmail.com</span>
-              <span className="contact-arrow">↗</span>
-            </a>
+            {contactLinks.map((contact) => {
+              const ContactIcon = contact.icon;
 
-            <a
-              href="https://www.linkedin.com/in/samawahidee/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              <span className="contact-label">LINKEDIN</span>
-              <span className="contact-value">View my LinkedIn profile</span>
-              <span className="contact-arrow">↗</span>
-            </a>
+              return (
+                <a
+                  key={contact.label}
+                  href={contact.href}
+                  className="contact-link"
+                  target={contact.external ? "_blank" : undefined}
+                  rel={contact.external ? "noopener noreferrer" : undefined}
+                >
+                  <span className="contact-icon">
+                    <ContactIcon aria-hidden="true" />
+                  </span>
 
-            <a
-              href="https://github.com/Sama-wahidee/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="contact-link"
-            >
-              <span className="contact-label">GITHUB</span>
-              <span className="contact-value">View my GitHub projects</span>
-              <span className="contact-arrow">↗</span>
-            </a>
+                  <span className="contact-info">
+                    <span className="contact-label">{contact.label}</span>
+
+                    <span className="contact-value">{contact.value}</span>
+                  </span>
+
+                  <FiArrowUpRight
+                    className="contact-arrow"
+                    aria-hidden="true"
+                  />
+                </a>
+              );
+            })}
           </div>
         </div>
       </div>
