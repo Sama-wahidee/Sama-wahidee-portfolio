@@ -1,4 +1,4 @@
-import profileImage from "../assets/sama-profile.png";
+import profileImage from "../assets/sama.jpeg";
 import cvFile from "../assets/Sama-Wahidee-CV.pdf";
 function Hero() {
   return (
@@ -30,18 +30,6 @@ function Hero() {
             >
               ↓ Download CV
             </a>
-          </div>
-
-          <div className="hero-tech">
-            <span>React</span>
-            <span>•</span>
-            <span>Node.js</span>
-            <span>•</span>
-            <span>MySQL</span>
-            <span>•</span>
-            <span>Python</span>
-            <span>•</span>
-            <span>FastAPI</span>
           </div>
         </div>
 
